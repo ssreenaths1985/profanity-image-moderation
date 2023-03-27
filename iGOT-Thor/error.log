@@ -1,0 +1,24 @@
+WARNING:tensorflow:From /home/test/miniconda3/envs/zz/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+INFO:werkzeug: * Running on http://0.0.0.0:5006/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:tensorflow:From /home/test/miniconda3/envs/zz/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 759-105-674
+ERROR:root:cannot identify image file <_io.BytesIO object at 0x7f352137d0f8>
+INFO:werkzeug:127.0.0.1 - - [01/Mar/2021 17:26:45] "[35m[1mPOST /thor-igot/image/upload HTTP/1.1[0m" 500 -
+WARNING:tensorflow:From /home/test/miniconda3/envs/zz/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+INFO:werkzeug: * Running on http://0.0.0.0:5006/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:tensorflow:From /home/test/miniconda3/envs/zz/lib/python3.6/site-packages/tensorflow/python/util/dispatch.py:201: sparse_to_dense (from tensorflow.python.ops.sparse_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead.
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 759-105-674
+ERROR:root:Image Not of Correct Format
+INFO:werkzeug:127.0.0.1 - - [01/Mar/2021 17:28:00] "[31m[1mPOST /thor-igot/image/upload HTTP/1.1[0m" 400 -

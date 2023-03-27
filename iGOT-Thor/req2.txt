@@ -1,0 +1,5 @@
+Keras==2.4.3
+tensorflow==2.3.0
+imageai==2.1.5
+pandas==1.1.4
+fastai==1.0.61

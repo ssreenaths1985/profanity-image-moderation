@@ -1,0 +1,1 @@
+copy %cd%\__init__.py %CONDA_PREFIX%\lib\python3.6\site-packages\imageai\Detection\__init__.py

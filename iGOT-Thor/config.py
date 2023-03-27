@@ -1,0 +1,11 @@
+import os
+
+DEBUG = True
+API_URL_PREFIX = "/thor-igot"
+HOST = '0.0.0.0'
+# PORT = 5006
+ENABLE_CORS = True
+PORT = os.environ.get('IMAGE_MODERATION_PORT', 5006)
+ENABLE_OCR = True
+ENABLE_MAP = True
+ENABLE_IMG_PROFANITY = True

@@ -1,0 +1,1 @@
+from .users import IMAGE_CLASSIFIER_BLUEPRINT

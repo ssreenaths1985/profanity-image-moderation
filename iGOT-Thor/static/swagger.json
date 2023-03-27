@@ -1,0 +1,142 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This service helps to check if an image is offensive or not. If offensive, the result of the service helps us to understand to which category it belongs such as Nude/Sex/Risque/Violence. Apart from these, the service also checks for the presence of India Map in the image and also for any profane words present in the image.",
+    "version": "1.0.0",
+    "title": "THOR iGOT"
+  },
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/thor-igot/image/upload": {
+      "post": {
+        "tags": [
+          "Image-Upload"
+        ],
+        "summary": "Upload image that you want to check.",
+        "description": "",
+        "operationId": "uploadFile",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "image",
+            "in": "formData",
+            "description": "Upload the image.",
+            "required": false,
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation",
+            "produces": [
+              "application/json"
+            ],
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "200",
+                  "description": "Successful Operation"
+                },
+                "classification": {
+                  "type": "string",
+                  "description": "Classifies the image as Offensive/Not Offensive"
+                },
+                "image_profanity": {
+                  "type": "object",
+                  "properties": {
+                    "is_safe": {
+                      "type": "boolean",
+                      "description": "'True' if the Image is Not Offensive"
+                    },
+                    "nsfw-nude": {
+                      "type": "number",
+                      "description": "Shows the probability(on the scale of 0-1) that the image category is Nude."
+                    },
+                    "nsfw-risque": {
+                      "type": "number",
+                      "description": "Shows the probability(on the scale of 0-1) that the image category is of Risque."
+                    },
+                    "nsfw-sex": {
+                      "type": "number",
+                      "description": "Shows the probability(on the scale of 0-1) that the image category is Sex."
+                    },
+                    "nsfw-violence": {
+                      "type": "number",
+                      "description": "Shows the probability(on the scale of 0-1) that the image category is Violence."
+                    },
+                    "sfw": {
+                      "type": "number",
+                      "description": "Shows the probability(on the scale of 0-1) that the image category is Safe."
+                    }
+                  }
+                },
+                "india_classification": {
+                  "type": "object",
+                  "properties": {
+                    "percentage_probability": {
+                      "type": "number",
+                      "description": "Shows percentage probability that the image contains India Map."
+                    },
+                    "present": {
+                      "type": "boolean",
+                      "description": "True if India is present"
+                    },
+                    "classification": {
+                      "type": "object",
+                      "properties": {
+                        "correct_percentage": {
+                          "type": "string",
+                          "description": "Shows the percentage probability that India Map is correct"
+                        },
+                        "incorrect_percentage": {
+                          "type": "number",
+                          "description": "Shows the percentage probability that India Map is wrong"
+                        }
+                      }
+                    }
+                  }
+                },
+                "text_profanity": {
+                  "type": "object",
+                  "properties": {
+                    "overall_text_classification": {
+                      "type": "object",
+                      "properties": {
+                        "classification": {
+                          "type": "string",
+                          "description": "Classifies the text as Offensive/Not Offensive"
+                        },
+                        "probability": {
+                          "type": "number",
+                          "description": "Shows the percentage probability that the test is Offensive/Not Offensive"
+                        }
+                      }
+                    },
+                    "possible_profanity": {
+                      "type": "list",
+                      "description": "A list of profane words in the image."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Input Error"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

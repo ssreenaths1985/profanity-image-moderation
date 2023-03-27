@@ -1,0 +1,54 @@
+{
+    "labels" : [
+        "aeroplane",
+        "bicycle",
+        "bird",
+        "boat",
+        "bottle",
+        "bus",
+        "car",
+        "cat",
+        "chair",
+        "cow",
+        "diningtable",
+        "dog",
+        "foot",
+        "hand",
+        "head",
+        "horse",
+        "india",
+        "motorbike",
+        "person",
+        "pottedplant",
+        "sheep",
+        "sofa",
+        "train",
+        "tvmonitor"
+    ],
+    "anchors" : [
+        [
+            216,
+            330,
+            323,
+            207,
+            369,
+            365
+        ],
+        [
+            115,
+            271,
+            122,
+            102,
+            179,
+            179
+        ],
+        [
+            23,
+            35,
+            48,
+            75,
+            64,
+            172
+        ]
+    ]
+}
